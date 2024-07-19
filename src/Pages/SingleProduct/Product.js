@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaChevronRight } from "react-icons/fa6";
 import { RxDividerVertical } from "react-icons/rx";
 
@@ -21,22 +21,31 @@ import img4 from '../../Assets/Images/image 4.png'
 import { useLocation, useNavigate } from "react-router-dom";
 function Product() {
   const location = useLocation();
-  const {state} = location;
-  const {product} = state;
-const navigate = useNavigate();
-  function handleClick(product){
+  const { state } = location;
+  const { product } = state;
+  const [count , setCount] = useState(1)
+  const navigate = useNavigate();
+  function handleClick(product) {
 
-    navigate('/Cart' , {state:{product:product}})
+    navigate('/Cart', { state: { product: product , count:count } })
   }
-
+  function handleCount(sign){
+    sign === '-' ? ((count === 1)? setCount(count) : setCount(prev => prev-1))  : (setCount(prev => prev+1))
+  }
+function handleHome(){
+  navigate('/')
+}
+function handleShop(){
+  navigate('/Shop')
+}
   return (
     <>
       <div className="prod-header ">
-        <div style={{ color: "#9F9F9F" }}>Home</div>
+        <div style={{ color: "#9F9F9F",cursor:"pointer" }} onClick={()=>handleHome()}>Home</div>
         <div>
           <FaChevronRight style={{ fontSize: "0.9rem" }} />
         </div>
-        <div style={{ color: "#9F9F9F" }}>Shop</div>
+        <div style={{ color: "#9F9F9F" ,cursor:"pointer"}} onClick={()=>handleShop()}>Shop</div>
         <div>
           <FaChevronRight style={{ fontSize: "0.9rem" }} />
         </div>
@@ -97,10 +106,11 @@ const navigate = useNavigate();
             <button style={{ backgroundColor: '#B88E2F' }}></button>
           </span>
           <p className="config-buttons">
+           
             <button>
-              <span>-</span>#number<span>+</span>
+              <span style={{cursor:"pointer"}} onClick={()=>handleCount('-')}>-</span> {count}<span style={{cursor:"pointer"}} onClick={()=>handleCount('+')}>+</span>
             </button>
-            <button onClick={()=>handleClick(product)}>Add to cart</button>
+            <button onClick={() => handleClick(product)}>Add to cart</button>
             <button>+ Compare</button>
           </p>
           <hr />

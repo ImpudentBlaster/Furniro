@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 import ShopProducts from "./ShopProducts";
 import ShopPagination from "./ShopPagination";
 import PageIndicator from "../../Components/PageIndicator";
+import Details from "../../Components/Details";
 function Shop() {
   return (
     <>
@@ -54,6 +55,8 @@ function Shop() {
       <ShopProducts/>
 
       <ShopPagination/>
+
+      <Details/>
     </>
   );
 }

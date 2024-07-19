@@ -12,6 +12,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import PageIndicator from "../../Components/PageIndicator";
 import { FaPhoneAlt } from "react-icons/fa";
 import { BsClockFill } from "react-icons/bs";
+import Details from "../../Components/Details";
 function Contact() {
   return (
     <>
@@ -60,6 +61,8 @@ function Contact() {
       <button className="contact-submit-button">Submit</button>
       </div>
       </div>
+
+      <Details/>
     </>
   );
 }

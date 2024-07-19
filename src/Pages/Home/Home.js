@@ -37,7 +37,7 @@ function Home() {
             </div>
             <button
               className="img-text-button"
-              style={{ backgroundColor: "#B88E2F", color: "white" }}
+              
             >
               BUY NOW
             </button>
@@ -108,7 +108,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="home-section-4 container-fluid mb-5">
+      {/* <div className="home-section-4 container-fluid mb-5">
         <div className="section-4-text">
           <div className="row">
             <div className="col-12 title">50+ Beautiful rooms inspiration</div>
@@ -119,7 +119,7 @@ function Home() {
           </div>
           <button >Explore More</button>
         </div>
-      </div>
+      </div> */}
 
 <div className="home-section-5 ">
   <div className="section-5-text">
