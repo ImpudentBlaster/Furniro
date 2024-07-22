@@ -33,7 +33,7 @@ body {
   font-weight: 500;
 }
 .links a:hover{
-  border-bottom: 0.15rem solid black;
+  color: #f8cf6f;
 }
 .icons {
   display: flex;
@@ -79,6 +79,12 @@ ul {
 .footer button {
   margin-left: 1rem;
   font-weight: 500;
+}
+.f2-a li{
+  cursor: pointer;
+}
+.f2-a li:hover{
+  color: #f8cf6f;
 }
 /* Footer  */
 
@@ -570,7 +576,8 @@ gap:0.5rem;
 .cart-content{
   display: flex;
   padding: 0;
-  justify-content: space-between;
+  gap:4rem;
+  justify-content: center;
   margin-top: 3rem;
   padding: 0 1.5rem;
 }
@@ -582,13 +589,15 @@ gap:0.5rem;
 .cart-heading-indicator{
   display: flex;
   background-color: #F9F1E7;
+ 
   padding: 1.5rem;
   font-weight: 600;
-  padding-left: 8rem;
+  padding-left: 7rem;
   gap: 4rem;
 }
 .cart-item{
-  padding: 1.5rem;
+  padding: 1.5rem ;
+  padding-left: 0;
   display: flex;
   align-items: center;
   gap: 2rem;
