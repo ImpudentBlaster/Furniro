@@ -24,9 +24,7 @@ body {
   display: flex;
   gap: 4rem;
 }
-.links a:active{
-  border-bottom: 10px solid black;
-}
+
 .links a {
   text-decoration: none;
   color: black;
